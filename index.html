@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Arnold Pring"
         description="WDD 131 - Dynamic Wed Fundamentals - Arnold Pring - Landing Page">
     <title>WDD 131 - Dynamic Wed Fundamentals - Arnold Pring</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
@@ -24,11 +26,26 @@
 
     <main>
         <h1>Arnold Pring</h1>
-        <section class="card"></section>
-        <section class="card"></section>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <p>Hello! My name is Arnold Pring. I am currently living in the Philippines. I have a background in
+                    graphic
+                    design and am excited to expand my skills into web development. In my free time, I enjoy hiking,
+                    photography, and exploring new technologies.</p>
+                <img src="images/arnold.jpg" alt="Picture of Arnold Pring" width="100" height="100">
+            </div>
+        </section>
+        <section class="card">
+            <h2>Course Information</h2>
+            <p>This course, WDD 131 - Dynamic Web Fundamentals, is designed to provide students with a solid foundation
+                in web development. Throughout the course, we will cover topics such as HTML, CSS, JavaScript, and
+                responsive design. Students will have the opportunity to work on hands-on projects to apply their
+                knowledge and build a portfolio of web development skills.</p>
+        </section>
     </main>
     <footer>
-        <p><span id="currentyear"></span>© Arnold Pring - Philippines</p>
+        <p>©<span id="currentyear"></span> Arnold Pring - Philippines</p>
         <p id="lastModified">Last Updated: June 2024</p>
     </footer>
 

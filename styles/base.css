@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header h1,
+footer {
+    background-color: #ddd;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    /* space between nav items */
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    background: rgb(57, 72, 90);
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: wavy underline;
+}
+
+#course-title span,
+footer {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    max-width: 1080px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* responsive columns */
+    gap: 1rem;
+    /* space between cards */
+    align-items: start;
+}
+
+/* make the main heading span the full width above the cards */
+main>h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background-color: rgb(57, 72, 90);
+    font-size: 1.25rem;
+    text-align: center;
+    color: white;
+}
+
+.about-me {
+    display: flex;
+    gap: 1rem;
+}
