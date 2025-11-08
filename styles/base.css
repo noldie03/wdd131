@@ -8,7 +8,18 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-header,
+header {
+    background-color: #ddd;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    padding: 1rem 0;
+}
+
 footer {
     background-color: #ddd;
     padding: 1rem;
@@ -40,7 +51,7 @@ nav a:hover {
     text-decoration: wavy underline;
 }
 
-#course-title span,
+#course-title,
 footer {
     display: block;
     text-align: center;
