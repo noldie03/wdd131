@@ -71,6 +71,7 @@ main>h1 {
     padding: 1rem;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    height: 100%;
 }
 
 .card h2 {
@@ -85,4 +86,8 @@ main>h1 {
 .about-me {
     display: flex;
     gap: 1rem;
+}
+
+.card ul li {
+    list-style: none;
 }
