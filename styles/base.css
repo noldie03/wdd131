@@ -12,12 +12,12 @@ header {
     background-color: #ddd;
     padding: 1rem 0;
     text-align: center;
-    font-size: 1.5rem;
 }
 
-header h1 {
+header span {
     margin-bottom: 0.5rem;
     padding: 1rem 0;
+    font-size: 2rem;
 }
 
 footer {
