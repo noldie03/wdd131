@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #83a9fcd2;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+footer {
+    width: 100%;
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    /* padding/border will now be included in the width */
+}
+
+* {
+    box-sizing: border-box;
+}
