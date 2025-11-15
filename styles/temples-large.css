@@ -1,0 +1,27 @@
+@media screen and (min-width: 800px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+
+    .navigation a {
+        border-bottom: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+}
