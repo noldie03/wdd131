@@ -22,7 +22,7 @@ header h1 {
 main {
     position: relative;
     min-height: 70vh;
-    background-image: url("images/philippines.jpg");
+    background-image: url("../images/tarsier.webp");
     background-size: cover;
     background-position: center;
     padding: 2rem;
@@ -32,9 +32,37 @@ main {
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(228, 226, 226, 0.7);
     padding: 1rem 1.5rem;
-    max-width: 320px;
+    height: fit-content;
+    border-radius: 8px;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+section.data-card {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1rem 1.5rem;
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-left: -2rem;
+    /* overlay effect */
+}
+
+section.weather-card {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    width: max-content;
+    /* fits content width exactly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section h2 {
@@ -53,14 +81,20 @@ dl {
 
 dt {
     font-weight: bold;
+    text-align: right;
 }
 
 dd {
     margin: 0;
+    text-align: left;
 }
 
 section:last-of-type h2::after {
     content: " ⛅";
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 1.2em;
+    vertical-align: middle;
 }
 
 footer {
@@ -71,12 +105,32 @@ footer {
     font-size: 0.9rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 575px) {
+
     main {
         grid-template-columns: 1fr;
+        background-image: none;
     }
 
     section {
-        max-width: 100%;
+        max-width: none;
+        width: 100%;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    section.data-card,
+    section.weather-card {
+        position: static;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    section.data-card h2,
+    section.weather-card h2 {
+        margin-left: 0;
+        /* reset overlay on mobile */
     }
 }
