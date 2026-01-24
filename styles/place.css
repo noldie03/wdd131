@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ec1a2b;
+    --secondary-color: rgb(0, 0, 255);
+}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 header {
-    background-color: #ec1a2b;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -42,7 +47,7 @@ main {
     height: 100%;
     object-fit: cover;
     border-top: 10px solid yellow;
-    border-bottom: 10px solid rgb(0, 0, 255);
+    border-bottom: 10px solid var(--secondary-color);
 }
 
 section {
@@ -80,7 +85,7 @@ section.weather-card {
 }
 
 section h2 {
-    background-color: rgb(0, 0, 255);
+    background-color: var(--secondary-color);
     color: white;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -112,7 +117,7 @@ section:last-of-type h2::after {
 }
 
 footer {
-    background-color: #ec1a2b;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -138,7 +143,6 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 40vh;
     }
 
     .hero {
@@ -171,6 +175,7 @@ footer {
     section.weather-card h2 {
         margin-left: 0;
         /* reset overlay on mobile */
+        font-size: 2rem;
 
     }
 
