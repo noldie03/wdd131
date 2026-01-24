@@ -119,7 +119,7 @@ footer {
     font-size: 0.9rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
     main {
         grid-template-columns: 1fr;
