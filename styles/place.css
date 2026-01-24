@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header {
+    background-color: #ec1a2b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    position: relative;
+    min-height: 70vh;
+    background-image: url("images/philippines.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 1.5rem;
+    max-width: 320px;
+}
+
+section h2 {
+    background-color: #ec1a2b;
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+section:last-of-type h2::after {
+    content: " ⛅";
+}
+
+footer {
+    background-color: #ec1a2b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        max-width: 100%;
+    }
+}
