@@ -1,0 +1,16 @@
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    animation: fadeFromBlack 1s ease-in-out;
+}
+
+@keyframes fadeFromBlack {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

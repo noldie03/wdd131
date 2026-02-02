@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header{
+    background-color: #173753;
+    padding: 1rem;
+}
+
+header span {
+    margin-bottom: 0.5rem;
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: #173753;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    /* space between nav items */
+    list-style: none;
+    margin: 0;
+    background: #173753;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #173753;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* mobile menu links full-width and good touch targets */
+.navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+main h1, figcaption {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* gallery layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+    background: #f8f8f8;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* ensures caption sits below image */
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* keeps all images same ratio/size */
+    object-fit: cover;
+    /* fills the box without distortion */
+    display: block;
+    border: 0;
+}
+
+.gallery figcaption {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #222;
+    background: transparent;
+    /* ensure not overlaying */
+}

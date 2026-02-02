@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples Picture Album</title>
+    <meta name="author" content="Arnold Pring">
+    <meta name="description"
+        content="A picture album of magnificent and beautifully built holy temples located in the country of the Philippines.">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+        <span>Temple Album</span>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="gallery" aria-label="Temple photos">
+            <!-- Temple photos will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> Arnold Pring - Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
