@@ -12,7 +12,7 @@ body {
 
 header,
 footer {
-    background-color: #8b4e2b;
+    background-color: #844A29;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -35,7 +35,7 @@ form {
 }
 
 /* ====== Labels & Inputs ====== */
-label {
+label, .bold {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
@@ -102,7 +102,7 @@ fieldset label {
 /* ====== Submit Button ====== */
 input[type="submit"] {
     margin-top: 1.5rem;
-    background-color: #8b4e2b;
+    background-color: #844A29;
     color: white;
     border: none;
     cursor: pointer;
