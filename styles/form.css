@@ -1,0 +1,149 @@
+/* ====== Base Styles ====== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header,
+footer {
+    background-color: #8b4e2b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* ====== Form Container ====== */
+form {
+    background: rgba(180, 52, 52, 0.24);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Labels & Inputs ====== */
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ====== Fieldsets ====== */
+fieldset {
+    border: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Horizontal Rating Layout */
+.rating-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.rating .option {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rating input[type="radio"] {
+    width: auto;
+}
+
+.rating .option label {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* ====== Submit Button ====== */
+input[type="submit"] {
+    margin-top: 1.5rem;
+    background-color: #8b4e2b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #662e09;
+}
+
+.optional {
+    color: #007BFF;
+    font-weight: normal;
+    font-style: normal;
+    margin-left: 0.25rem;
+}
+
+/* Style the red asterisk for required fields */
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 500px) {
+    form {
+        padding: 2rem;
+    }
+    .rating-options {
+        flex-direction: column;
+        /* stack vertically */
+        align-items: flex-start;
+        /* align to left */
+        gap: 0.75rem;
+        max-width: 100%;
+    }
+
+    .rating .option {
+        flex-direction: row;
+        /* radio + number side by side */
+        gap: 0.5rem;
+    }
+}
