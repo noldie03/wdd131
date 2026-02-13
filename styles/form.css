@@ -13,7 +13,7 @@ body {
 header,
 footer {
     background-color: #844A29;
-    color: white;
+    color: #f4f6f8;
     text-align: center;
     padding: 1rem;
 }
@@ -103,7 +103,7 @@ fieldset label {
 input[type="submit"] {
     margin-top: 1.5rem;
     background-color: #844A29;
-    color: white;
+    color: #f4f6f8;
     border: none;
     cursor: pointer;
     font-weight: bold;
