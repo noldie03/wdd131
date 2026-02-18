@@ -58,22 +58,25 @@ header, footer {
 
 .hero-content {
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0%;
+    left: 44%;
+    /* transform: translate(-50%, -50%); */
     color: var(--clr-white);
-    background: rgba(0, 0, 0, 0.226);
-    padding: 2rem 3rem;
+    background: rgba(0, 0, 0, 0.164);
+    padding: 1rem 2rem;
     text-align: center;
     border-radius: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 .features {
     padding: 2rem;
     text-align: center;
     background: var(--clr-gray);
-    color: var(--clr-black);
+}
+.features h2 {
+    color: var(--clr-white);
+    background: var(--clr-red);
 }
 
 .feature-cards {
