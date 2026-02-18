@@ -201,7 +201,45 @@ header {
 /* Responsive */
 @media (max-width: 768px) {
 
-     .specs-table table {
+    .hero {
+        max-height: none;
+        /* remove fixed height */
+    }
+    
+    .hero img {
+        height: auto;
+        /* image adjusts naturally */
+     }
+    
+    .hero-content {
+        position: relative;
+        /* moves below the image */
+        width: 93%;
+        bottom: auto;
+        /* reset bottom */
+        left: auto;
+        /* reset left */
+        transform: none;
+        /* remove transform */
+        background: rgba(0, 0, 0, 0.164);
+        padding: 1rem 1.5rem;
+        text-align: center;
+        border-radius: 0px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        color: var(--clr-black);
+    }
+
+    .card {
+        width: 100%;
+    }
+    
+    .specs-table table {
         display: none;
     }
 
