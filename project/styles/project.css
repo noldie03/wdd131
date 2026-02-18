@@ -166,15 +166,49 @@ header {
     background: #fafafa;
 }
 
+#specsAccordion {
+    display: none;
+}
+
+/* Accordion item styles */
+.spec-item {
+    border: 1px solid var(--clr-gray);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.spec-header {
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+}
+
+.spec-content {
+    padding: 0.5rem 1rem;
+    background: #fff;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 
-    .specs-table table,
-    .specs-table th,
-    .specs-table td {
-        display: block;
-        width: 100%;
+     .specs-table table {
+        display: none;
     }
+
+    #specsAccordion {
+        display: block;
+    }
+
 
     .specs-table th {
         font-size: 1.1rem;

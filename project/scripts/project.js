@@ -1,3 +1,4 @@
+// Your existing code
 const year = document.getElementById('currentyear');
 year.textContent = new Date().getFullYear();
 
@@ -21,7 +22,7 @@ const specs = [
 
 function generateSpecsTable(specsArray, tableBodyId) {
     const tableBody = document.getElementById(tableBodyId);
-    tableBody.innerHTML = ""; // clear old rows if theres any
+    tableBody.innerHTML = ""; // clear old rows if there’s any
 
     specsArray.forEach(spec => {
         const row = document.createElement("tr");
@@ -35,5 +36,43 @@ function generateSpecsTable(specsArray, tableBodyId) {
     });
 }
 
-// Calls it
+// Calls table function
 generateSpecsTable(specs, "specsTableBody");
+
+// New function: mobile accordion
+function generateSpecsAccordion(specsArray, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; // clear previous
+
+    specsArray.forEach(spec => {
+        const item = document.createElement("div");
+        item.classList.add("spec-item");
+
+        const header = document.createElement("div");
+        header.classList.add("spec-header");
+        header.textContent = spec.name;
+
+        const toggle = document.createElement("span");
+        toggle.classList.add("toggle-icon");
+        toggle.textContent = "+";
+        header.appendChild(toggle);
+
+        const content = document.createElement("div");
+        content.classList.add("spec-content");
+        content.textContent = spec.value;
+        content.style.display = "none";
+
+        header.addEventListener("click", () => {
+            const isOpen = content.style.display === "block";
+            content.style.display = isOpen ? "none" : "block";
+            toggle.textContent = isOpen ? "+" : "–";
+        });
+
+        item.appendChild(header);
+        item.appendChild(content);
+        container.appendChild(item);
+    });
+}
+
+// Initialize accordion
+generateSpecsAccordion(specs, "specsAccordion");
