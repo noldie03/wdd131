@@ -29,6 +29,17 @@ header, footer {
     text-align: center;
 }
 
+header {
+  position: fixed; /*fixed on top */
+  top: 0;
+  width: 100%;
+  background: var(--clr-red);
+  z-index: 10; /* stays above hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-nav {
     list-style: none;
     display: flex;
