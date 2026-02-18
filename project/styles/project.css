@@ -207,8 +207,12 @@ header {
     }
     
     .hero img {
+        width: 100%;
         height: auto;
-        /* image adjusts naturally */
+        /* let it scale */
+        aspect-ratio: 16/9;
+        /* reserve space to prevent shift */
+        object-fit: cover;
      }
     
     .hero-content {
