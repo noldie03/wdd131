@@ -209,6 +209,16 @@ main.review {
     padding: 1rem;
     display: flex;
     justify-content: center;
+    color: var(--clr-white);
+}
+
+main.review h1 {
+    color: var(--clr-white);  
+    background: var(--clr-red);
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0 auto 1rem auto;
+    border-radius: 8px;
 }
 
 /* ====== Form Container ====== */
@@ -263,6 +273,11 @@ fieldset label {
     font-weight: normal;
     margin-right: 1rem;
     margin-top: 0.5rem;
+}
+
+fieldset.features{
+    text-align: left;
+    padding: 0;
 }
 
 /* Horizontal Rating Layout */
@@ -330,7 +345,7 @@ input[type="submit"]:hover {
     .hero-content {
         position: relative;
         /* moves below the image */
-        width: 93%;
+        width: 100%;
         bottom: auto;
         /* reset bottom */
         left: auto;
