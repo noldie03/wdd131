@@ -22,6 +22,7 @@ const specs = [
 
 function generateSpecsTable(specsArray, tableBodyId) {
     const tableBody = document.getElementById(tableBodyId);
+    if (!tableBody) return; // stop if element not found
     tableBody.innerHTML = ""; // clear old rows if there’s any
 
     specsArray.forEach(spec => {
