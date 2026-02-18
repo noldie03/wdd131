@@ -35,10 +35,13 @@ form {
 }
 
 /* ====== Labels & Inputs ====== */
-label, .bold {
+label,
+.bold {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
+    color: var(--clr-red);
+
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -126,6 +129,7 @@ input[type="submit"]:hover {
     form {
         padding: 2rem;
     }
+
     .rating-options {
         flex-direction: column;
         /* stack vertically */
