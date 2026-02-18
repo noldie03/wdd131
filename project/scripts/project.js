@@ -27,9 +27,9 @@ function generateSpecsTable(specsArray, tableBodyId) {
     specsArray.forEach(spec => {
         const row = document.createElement("tr");
         const th = document.createElement("th");
-        th.textContent = spec.name;
+        th.textContent = `${spec.name}`;
         const td = document.createElement("td");
-        td.textContent = spec.value;
+        td.textContent = `${spec.value}`;
         row.appendChild(th);
         row.appendChild(td);
         tableBody.appendChild(row);
@@ -39,33 +39,36 @@ function generateSpecsTable(specsArray, tableBodyId) {
 // Calls table function
 generateSpecsTable(specs, "specsTableBody");
 
+
 // New function: mobile accordion
 function generateSpecsAccordion(specsArray, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = ""; // clear previous
+    container.innerHTML = ""; // clear previous content
 
     specsArray.forEach(spec => {
         const item = document.createElement("div");
         item.classList.add("spec-item");
 
+        // Header with toggle using template literal
         const header = document.createElement("div");
         header.classList.add("spec-header");
-        header.textContent = spec.name;
+        header.innerHTML = `${spec.name} <span class="toggle-icon">+</span>`;
 
-        const toggle = document.createElement("span");
-        toggle.classList.add("toggle-icon");
-        toggle.textContent = "+";
-        header.appendChild(toggle);
-
+        // Content div
         const content = document.createElement("div");
         content.classList.add("spec-content");
-        content.textContent = spec.value;
-        content.style.display = "none";
+        content.textContent = `${spec.value}`; // template literal
 
+        content.style.display = "none"; // hidden by default
+
+        // Click to toggle
         header.addEventListener("click", () => {
             const isOpen = content.style.display === "block";
             content.style.display = isOpen ? "none" : "block";
-            toggle.textContent = isOpen ? "+" : "–";
+            // Update toggle using template literal
+            header.innerHTML = isOpen
+                ? `${spec.name} <span class="toggle-icon">+</span>`
+                : `${spec.name} <span class="toggle-icon">–</span>`;
         });
 
         item.appendChild(header);
