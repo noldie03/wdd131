@@ -44,6 +44,7 @@ generateSpecsTable(specs, "specsTableBody");
 // New function: mobile accordion
 function generateSpecsAccordion(specsArray, containerId) {
     const container = document.getElementById(containerId);
+    if (!container) return; // stop if element not found
     container.innerHTML = ""; // clear previous content
 
     specsArray.forEach(spec => {
